@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE access SYSTEM "access.dtd">
+<array>
+	<properties>
+		<comment />
+		<entry key="table.category.visible">true</entry>
+		<entry key="table.access.visible">true</entry>
+		<entry key="table.URL.visible">true</entry>
+		<entry key="table.password.visible">false</entry>
+	</properties>
+	<descriptor>
+		<f name="category" system="true">
+			<type>java.lang.String</type>
+			<header>Category</header>
+			<default>default</default>
+		</f>
+		<f name="procedure" system="false">
+			<type>java.lang.String</type>
+			<header>Procedure</header>
+			<default>go</default>
+		</f>
+		<f name="my_pc" system="false">
+			<type>java.lang.String</type>
+			<header>My pc</header>
+			<default>francoPC</default>
+		</f>
+		<f name="at_my_home" system="false">
+			<type>java.lang.Boolean</type>
+			<header>My home</header>
+			<default>Trento</default>
+		</f>
+	</descriptor>
+	<row name="0">
+		<field name="category" style="font-style: plain;">
+			<value>value category</value>
+			<backup time="1300480259861">category b</backup>
+			<backup time="1300480259845">category a</backup>
+			<backup time="1300480259835">category</backup>
+		</field>
+		<field name="access" style="font-style: plain;">
+			<value>value access</value>
+		</field>
+		<field name="URL" style="font-style: plain;">
+			<value>http://www.mysite.com</value>
+		</field>
+		<field name="user" style="font-style: plain;">
+			<value>franco.t</value>
+		</field>
+		<field name="password" style="font-style: plain;">
+			<value>password value</value>
+		</field>
+		<field name="length" style="font-style: plain;">
+			<value>10</value>
+		</field>
+		<field name="fromDate" style="font-style: plain;">
+			<value>1300480259861</value>
+		</field>
+		<field name="toDate" style="font-style: plain;">
+			<value>1301480259845</value>
+		</field>
+		<field name="days" style="font-style: plain;">
+			<value>10</value>
+		</field>
+		<field name="text" style="font-style: plain;">
+			<value>text value</value>
+		</field>
+		<field name="preference" style="font-style: plain;">
+			<value>3</value>
+		</field>
+		<field name="rating" style="font-style: plain;">
+			<value>5</value>
+		</field>
+		<field name="expire" style="font-style: plain;">
+			<value>false</value>
+			<backup time="1300480259861">true</backup>
+			<backup time="1300480259845">true</backup>
+			<backup time="1300480259835">false</backup>
+		</field>
+		<field name="autogeneration" style="font-style: plain;">
+			<value>false</value>
+			<backup time="1300480259861">true</backup>
+			<backup time="1300480259845">true</backup>
+			<backup time="1300480259835">false</backup>
+		</field>
+		<field name="changeLogin" style="font-style: plain;">
+			<value>false</value>
+			<backup time="1300480259861">true</backup>
+			<backup time="1300480259845">true</backup>
+			<backup time="1300480259835">false</backup>
+		</field>
+		<field name="chars" style="font-style: plain;">
+			<value>false</value>
+			<backup time="1300480259861">true</backup>
+			<backup time="1300480259845">true</backup>
+			<backup time="1300480259835">false</backup>
+		</field>
+		<field name="numbers" style="font-style: plain;">
+			<value>false</value>
+		</field>
+		<field name="symbols" style="font-style: plain;">
+			<value>false</value>
+		</field>
+		<field name="salt" style="font-style: plain;">
+			<value>java.lang.Object@156b6b9</value>
+		</field>
+		<field name="custom" style="font-style: plain;">
+			<value />
+		</field>
+		<field name="procedure" style="font-style: plain;">
+			<value>procedure custom value</value>
+		</field>
+		<field name="my_pc" style="font-style: plain;">
+			<value>my pc custom value</value>
+		</field>
+		<field name="at_my_home" style="font-style: plain;">
+			<value>false</value>
+			<backup time="1300480259861">true</backup>
+			<backup time="1300480259845">true</backup>
+			<backup time="1300480259835">false</backup>
+		</field>
+	</row>
+</array>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT array ( properties* , descriptor, row* ) >
+
+<!ELEMENT properties ( comment?, entry* ) >
+<!ELEMENT comment ( #PCDATA )>
+<!ELEMENT entry ( #PCDATA ) >
+<!ATTLIST entry key NMTOKEN #REQUIRED >
+
+<!ELEMENT descriptor ( f* ) >
+<!ELEMENT f ( type, header, default ) >
+<!ELEMENT type ( #PCDATA ) >
+<!ELEMENT header ( #PCDATA ) >
+<!ELEMENT default ( #PCDATA ) >
+<!ATTLIST f name NMTOKEN #REQUIRED >
+<!ATTLIST f system ( true | false ) #REQUIRED >
+
+
+<!ELEMENT row ( field* ) >
+<!ELEMENT field ( value, backup* ) >
+<!ELEMENT backup ( #PCDATA ) >
+<!ELEMENT value ( #PCDATA ) >
+
+<!ATTLIST row name NMTOKEN #REQUIRED >
+<!ATTLIST backup time CDATA #REQUIRED>
+<!ATTLIST field name CDATA #REQUIRED >
+<!ATTLIST field style CDATA "font-style: plain;" >
