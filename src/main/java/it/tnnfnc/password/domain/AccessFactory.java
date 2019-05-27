@@ -388,9 +388,9 @@ public class AccessFactory implements I_RowFactory<Access>, Serializable {
 			} catch (NumberFormatException e) {
 				i = 0;
 			}
-			o = new Integer(i);
+			o = Integer.valueOf(i);
 		} else if (type.equals(Boolean.class.getName())) {
-			o = new Boolean(value.trim());
+			o = Boolean.valueOf(value.trim());
 			// o = new Boolean(value);
 		} else if (type.equals(URL.class.getName())) {
 			value = (value == null || value == "") ? "http://" : value;

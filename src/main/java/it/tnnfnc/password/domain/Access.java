@@ -184,7 +184,7 @@ public class Access implements I_TableRow<I_StyleObject>, I_TracedStatus, I_Visi
 	 */
 	public void updateStatistics() {
 		get(AccessFactory.STATISTICS)
-				.setObject(new Integer(((Integer) get(AccessFactory.STATISTICS).getValue()).intValue() + 1));
+				.setObject(Integer.valueOf(((Integer) get(AccessFactory.STATISTICS).getValue()).intValue() + 1));
 	}
 
 	/**

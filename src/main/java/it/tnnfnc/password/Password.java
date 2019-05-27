@@ -201,15 +201,13 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Launch the application.
 	 * 
-	 * @param args
-	 *            no arguments needed.
+	 * @param args no arguments needed.
 	 */
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
 				UIManager.put("swing.boldMetal", Boolean.FALSE);
-
 				new Password();
 			}
 		});
@@ -251,28 +249,27 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	private void checkSecurity() {
-		if (1 == 1){
-			logsPanel.appendLog("No security manager was installed!",
-					PasswordConstants.getRedFormat());
+		{
+			logsPanel.appendLog("No security manager was installed!", PasswordConstants.getRedFormat());
 			return;
 		}
-		SecurityManager securityManager = System.getSecurityManager();
-		System.out.println("SecurityManager step 1 " + securityManager);
-		if (securityManager != null) {
-			String file = "pippo";
-			try {
-				securityManager.checkRead(file);
-			} catch (SecurityException err) {
-			}
-			try {
-				securityManager.checkWrite(file);
-			} catch (SecurityException err) {
-			}
-		} else {
-			securityManager = new SecurityManager();
-			System.setSecurityManager(securityManager);
-			System.out.println("SecurityManager step 2 " + securityManager);
-		}
+		// SecurityManager securityManager = System.getSecurityManager();
+		// System.out.println("SecurityManager step 1 " + securityManager);
+		// if (securityManager != null) {
+		// String file = "pippo";
+		// try {
+		// securityManager.checkRead(file);
+		// } catch (SecurityException err) {
+		// }
+		// try {
+		// securityManager.checkWrite(file);
+		// } catch (SecurityException err) {
+		// }
+		// } else {
+		// securityManager = new SecurityManager();
+		// System.setSecurityManager(securityManager);
+		// System.out.println("SecurityManager step 2 " + securityManager);
+		// }
 
 		/*
 		 * File, Socket, Net, Security, Runtime, Property, AWT, Reflect, and
@@ -349,8 +346,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Create the GUI and show it. For thread safety, this method should be
-	 * invoked from the event dispatch thread.
+	 * Create the GUI and show it. For thread safety, this method should be invoked
+	 * from the event dispatch thread.
 	 */
 	private void showGUI() {
 		frame.pack();
@@ -510,8 +507,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Install commands every time the document changes. Buttons acting on the
-	 * table rows are activated.
+	 * Install commands every time the document changes. Buttons acting on the table
+	 * rows are activated.
 	 */
 	@SuppressWarnings("unchecked")
 	private void installCommands() {
@@ -636,19 +633,13 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Add a button to the button panel. Button fill the available horizontal
-	 * space.
+	 * Add a button to the button panel. Button fill the available horizontal space.
 	 * 
-	 * @param p
-	 *            panel.
-	 * @param a
-	 *            action.
-	 * @param actionCommand
-	 *            the action command.
-	 * @param tooltip
-	 *            tooltip
-	 * @param g
-	 *            constraint.
+	 * @param p             panel.
+	 * @param a             action.
+	 * @param actionCommand the action command.
+	 * @param tooltip       tooltip
+	 * @param g             constraint.
 	 */
 	private void addButton(JToolBar p, Action a, String actionCommand, String tooltip) {
 		JButton b = new JButton(a);
@@ -658,8 +649,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Uninstall commands when the document is closed. Buttons acting on the
-	 * table rows are made unactive.
+	 * Uninstall commands when the document is closed. Buttons acting on the table
+	 * rows are made unactive.
 	 */
 	private void uninstallCommands() {
 		searchPanel.removeSearch("");
@@ -746,10 +737,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Change the security for the current document.
 	 * 
-	 * @param security
-	 *            the new security for the document.
-	 * @param backup
-	 *            back up properties.
+	 * @param security the new security for the document.
+	 * @param backup   back up properties.
 	 */
 	private void changeSecurity(AccessSecurityObject security, Properties backup) {
 		// Export back up to the device memory
@@ -771,15 +760,13 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	private void revertSecurity() {
-		// TODO Manage the undo of the security changes
-
+		// Manage the undo of the security changes
 	}
 
 	/**
 	 * When ready the password is enabled.
 	 * 
-	 * @param b
-	 *            true when ready.
+	 * @param b true when ready.
 	 */
 	private void setReady(boolean b) {
 		this.ready = b;
@@ -797,8 +784,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Create a titled border. The style can be changed.
 	 * 
-	 * @param t
-	 *            the title.
+	 * @param t the title.
 	 * @return the border.
 	 */
 	static Border createTitledBorder(String t) {
@@ -941,8 +927,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * net.catode.apps.AbstractApplication#saveAs(net.catode.resource.I_Resource
-	 * )
+	 * net.catode.apps.AbstractApplication#saveAs(net.catode.resource.I_Resource )
 	 */
 	@Override
 	public void saveAs(I_Resource r) throws IOException {
@@ -1064,8 +1049,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see
-	 * net.catode.password.PasswordController#displayPassword(java.awt.Point)
+	 * @see net.catode.password.PasswordController#displayPassword(java.awt.Point)
 	 */
 	public void displayPassword(int row, int modifiers) {
 		if (isReady() == false) {
@@ -1096,7 +1080,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 				if (p != null) {
 					String buffer = (modifiers
 							& java.awt.event.ActionEvent.SHIFT_MASK) == java.awt.event.ActionEvent.SHIFT_MASK
-									? access.getValue(AccessFactory.USER) + "\t" + new String(p) : new String(p);
+									? access.getValue(AccessFactory.USER) + "\t" + new String(p)
+									: new String(p);
 					copyToClipboard(buffer);
 				}
 				access.updateStatistics();
@@ -1119,16 +1104,15 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Encrypt the user password.
 	 * 
-	 * @param access
-	 *            the access.
-	 * @throws IllegalStateException
-	 *             when the generator internal status is in error.
-	 * @throws IllegalBlockSizeException
-	 *             when an error occurs attempting to decipher a user password.
-	 * @throws BadPaddingException
-	 *             when an error occurs attempting to decipher a user password.
-	 * @throws IllegalArgumentException
-	 *             when an error occurs attempting to decipher a user password.
+	 * @param access the access.
+	 * @throws IllegalStateException     when the generator internal status is in
+	 *                                   error.
+	 * @throws IllegalBlockSizeException when an error occurs attempting to decipher
+	 *                                   a user password.
+	 * @throws BadPaddingException       when an error occurs attempting to decipher
+	 *                                   a user password.
+	 * @throws IllegalArgumentException  when an error occurs attempting to decipher
+	 *                                   a user password.
 	 * @throws HashException
 	 */
 	public void encryptPassword(Access access) throws IllegalStateException, IllegalArgumentException,
@@ -1147,13 +1131,12 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Get the password.
 	 * 
-	 * @param access
-	 *            the access.
+	 * @param access the access.
 	 * @return the password.
-	 * @throws IllegalStateException
-	 *             when the generator internal status is in error.
-	 * @throws IllegalArgumentException
-	 *             when an error occurs attempting to decipher a user password.
+	 * @throws IllegalStateException    when the generator internal status is in
+	 *                                  error.
+	 * @throws IllegalArgumentException when an error occurs attempting to decipher
+	 *                                  a user password.
 	 */
 	public char[] getPassword(Access access) throws IllegalStateException, IllegalArgumentException {
 		if (securityObject == null) {
@@ -1168,17 +1151,15 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	 * Get a new password for the access. As a side effect the access salt is
 	 * updated from a random seed.
 	 * 
-	 * @param access
-	 *            the access.
+	 * @param access the access.
 	 * @return the password.
 	 * 
-	 * @throws IllegalStateException
-	 *             when the generator internal status is in error.
-	 * @throws InvalidKeyException
-	 *             when the initialization step fails because of wrong
-	 *             parameters.
-	 * @throws IllegalArgumentException
-	 *             when an error occurs attempting to decipher a user password.
+	 * @throws IllegalStateException    when the generator internal status is in
+	 *                                  error.
+	 * @throws InvalidKeyException      when the initialization step fails because
+	 *                                  of wrong parameters.
+	 * @throws IllegalArgumentException when an error occurs attempting to decipher
+	 *                                  a user password.
 	 */
 	public char[] newPassword(Access access) throws IllegalStateException, IllegalArgumentException {
 		if (isReady() == false) {
@@ -1195,10 +1176,8 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	/**
 	 * Start the pass phrase.
 	 * 
-	 * @param progressBar
-	 *            the count down progress bar.
-	 * @throws Exception
-	 *             when an error occurs during the secret key generation.
+	 * @param progressBar the count down progress bar.
+	 * @throws Exception when an error occurs during the secret key generation.
 	 */
 	public void setPassphrase(byte[] b) throws Exception {
 		try {
@@ -1254,13 +1233,11 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 
 	/**
 	 * Set the old changed internal object status. It is not allow more than one
-	 * status with the same time stamp. The trace is ordered from the first to
-	 * the last time stamp.
+	 * status with the same time stamp. The trace is ordered from the first to the
+	 * last time stamp.
 	 * 
-	 * @param tracedObjectID
-	 *            the object changed.
-	 * @param oldValue
-	 *            the old internal object status.
+	 * @param tracedObjectID the object changed.
+	 * @param oldValue       the old internal object status.
 	 */
 	public void saveStatus(Object tracedObjectID, Object oldValue) {
 		I_Status<I_StyleObject> o = new ObjectStatus<I_StyleObject>(new StyleObject(oldValue, ""), "Changed: ");
@@ -1293,8 +1270,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * @param error_attempt_counter
-	 *            the error_attempt_counter to set
+	 * @param error_attempt_counter the error_attempt_counter to set
 	 */
 	private void setError_attempt_counter(int error_attempt_counter) {
 		this.error_attempt_counter = error_attempt_counter;
@@ -1425,10 +1401,10 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Change the program properties action. Ask before changing the security If
-	 * OK, go ahead and show the password panel; if CANCEL go ahead with the new
-	 * security settings; if CHANGE go ahead with the new pass-phrase and
-	 * security settings
+	 * Change the program properties action. Ask before changing the security If OK,
+	 * go ahead and show the password panel; if CANCEL go ahead with the new
+	 * security settings; if CHANGE go ahead with the new pass-phrase and security
+	 * settings
 	 */
 	@SuppressWarnings("serial")
 	private class CommandChangeSecurityProperties extends AbstractAction {
@@ -1599,7 +1575,6 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	@SuppressWarnings("unused")
 	private class CommandImportDictionary extends AbstractAction {
 		public static final String ACTION_COMMAND = "ImportDictionary";
-		// TODO write here
 		/**
 		 * 
 		 */
@@ -1731,8 +1706,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Timer task updating the progress bar. When finished it cancels the
-	 * password.
+	 * Timer task updating the progress bar. When finished it cancels the password.
 	 * 
 	 */
 	private class AutosavingTask extends PeriodicTask {
@@ -1939,8 +1913,7 @@ public class Password extends AbstractApplication<AccessDocument> implements I_D
 	}
 
 	/**
-	 * Timer task updating the progress bar. When finished it cancels the
-	 * password.
+	 * Timer task updating the progress bar. When finished it cancels the password.
 	 * 
 	 */
 	private class DisplayPasswordTask extends SwingPeriodicTask {

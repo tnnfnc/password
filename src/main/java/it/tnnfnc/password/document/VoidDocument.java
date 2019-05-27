@@ -65,7 +65,6 @@ public class VoidDocument extends Document implements Serializable {
 
 	@Override
 	public VoidDocument copy() throws CloneNotSupportedException {
-		// TODO rewrite!
 		VoidDocument aDocument = new VoidDocument();
 		return aDocument;
 	}

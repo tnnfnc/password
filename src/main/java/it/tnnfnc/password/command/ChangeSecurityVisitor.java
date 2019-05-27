@@ -79,8 +79,6 @@ public class ChangeSecurityVisitor extends AccessVisitor {
 				access.setUserPassword(
 						new String(Base64.encode(cipher.doFinal(pwd.getBytes(), 0, pwd.getBytes().length))));
 				access.setSalt(salt);
-				// TODO the changed date
-
 			} catch (Exception e) {
 				// int i = 0;
 				String temp[] = new String[log.length + 1];
@@ -88,8 +86,6 @@ public class ChangeSecurityVisitor extends AccessVisitor {
 				temp[log.length] = access.getValue(AccessFactory.ACCESS) + ": Error occurred: " + e.getMessage();
 				log = temp;
 				application.setLog(log[log.length - 1]);
-				// System.out.println("Error at: " + (log.length - 1) + " - " +
-				// e.printStackTrace();
 			}
 		}
 	}

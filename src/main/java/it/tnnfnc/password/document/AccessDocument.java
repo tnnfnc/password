@@ -139,7 +139,6 @@ public class AccessDocument extends Document implements I_Visitable<AccessVisito
 
 	@Override
 	public AccessDocument copy() throws CloneNotSupportedException {
-		// TODO rewrite!
 		AccessDocument aDocument = new AccessDocument();
 		return aDocument;
 	}
@@ -205,7 +204,6 @@ public class AccessDocument extends Document implements I_Visitable<AccessVisito
 						e1.printStackTrace();
 					} //
 						// catch (InterruptedException e) {
-						// // TODO Auto-generated catch block
 						// e.printStackTrace();
 						// }
 				} catch (IOException e1) {
@@ -219,7 +217,6 @@ public class AccessDocument extends Document implements I_Visitable<AccessVisito
 		try {
 			t.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
